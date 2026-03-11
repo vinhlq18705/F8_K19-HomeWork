@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DASHBOARD</title>
+  <link href="../css/base.css" rel="stylesheet">
+  <link href="../css/theme.css" rel="stylesheet">
+  <style>
+    h1{
+    color:black;
+    }
+    p{
+    color:black;
+    }
+    /*Tổng quan hệ thống - Màu đỏ đô (Crimson) */
+    .section {
+      color: Crimson;
+    }
+
+    /* các mục Courses, Students... - Màu xanh biển  */
+    h3.title {
+      color: DeepSkyBlue;
+    }
+
+    /*Các đoạn mô tả - Màu xám chì (DimGray)  */
+    .highlight {
+      color: DimGray;
+    }
+  </style>
+</head>
+<body>
+<div class="big">
+  <!--   phần tử này có tag(h1) + class(.title)+ id(#special)+ internal + external  + inline style
+         inline style thắng vì nó có độ ưu tiên cao nhất
+         Màu hiển thị là màu đỏ -->
+
+  <h1 id="special" class="title" style="color:red">DASHBOARD</h1>
+  <h2 class="section">Tong quan he thong</h2>
+  <h3 class="title">Courses</h3>
+  <p class="highlight">Quan ly toan bo danh sach khoa hoc, noi dung giang day va lo trinh hoc tap cua sinh vien.</p>
+  <h3 class="title">Students</h3>
+  <p class="highlight">Theo doi thong tin chi tiet, tien do hoc tap va bang diem cua tung hoc vien.</p>
+  <h3 class="title">Teachers</h3>
+  <p class="highlight">Quan ly thong tin giang vien, lich day va danh gia hieu suat giang day hang thang.</p>
+  <h3 class="title">Orders</h3>
+  <p class="highlight">Kiem soat cac giao dich thanh toan, hoa don va trang thai dang ky khoa hoc.</p>
+  <h3 class="title">Reports</h3>
+  <p class="highlight">Bao cao thong ke doanh thu, ty le hoan thanh khoa hoc va bieu do tang truong.</p>
+</div>
+
+</body>
+</html>
