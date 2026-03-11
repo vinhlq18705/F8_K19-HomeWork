@@ -1,0 +1,37 @@
+h1 {
+color: DeepPink; /* Màu hồng đậm cho tiêu đề chính */
+}
+
+h2 {
+color: DarkOrange; /* Cam đậm cho tiêu đề phụ */
+}
+
+h3 {
+color: Gold; /* Màu vàng đồng */
+}
+
+p {
+color: Violet; /* Màu tím */
+}
+.title {
+color: Red; /* Màu đỏ  */
+}
+
+.section {
+color: ForestGreen; /* Xanh lá đậm */
+}
+
+.highlight {
+color: DeepPink; /* Màu hồng đậm */
+}
+
+.big {
+  color: DeepSkyBlue; /* Màu xanh da trời  */
+}
+#main {
+color: Teal; /* Màu xanh */
+}
+
+#special {
+color: Tomato; /* Màu đỏ cam  */
+}
