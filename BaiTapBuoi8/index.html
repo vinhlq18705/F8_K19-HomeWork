@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang=vi>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PERSONAL PROFILE CUSTOMIZER</title>
+    <style>
+        .layout {
+            width: 100%;
+            font-size: 0;
+            background: #ddd;
+        }
+
+        .control-panel {
+            display: inline-block;
+            width: 30%;
+            font-size: 16px;
+            margin-right: 1%;
+            background: #f5f5f5;
+        }
+
+        .preview-area {
+            display: inline-block;
+            width: 69%;
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        .result {
+            background-color: #fff;
+
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            padding: 3px 4px;
+            margin: 4px;
+            background: #ddd;
+        }
+
+        .result {
+            text-align: center;
+        }
+
+        span {
+            padding: 5px 8px;
+            margin: 3px;
+            background: #f0f0f0;
+        }
+
+        /*1. màu nền hồ sơ */
+        #light:checked ~ label[for="light"] {
+            color: black;
+            font-weight: bold;
+        }
+
+        body:has(#light:checked) .result {
+            background: #fff;
+        }
+
+        #gray:checked ~ label[for="gray"] {
+            color: black;
+            font-weight: bold;
+        }
+
+        body:has(#gray:checked) .result {
+            background: gray;
+        }
+
+        #yellow:checked ~ label[for="yellow"] {
+            color: black;
+            font-weight: bold;
+        }
+
+        body:has(#yellow:checked) .result {
+            background: yellow;
+        }
+
+        #blue:checked ~ label[for="blue"] {
+            color: black;
+            font-weight: bold;
+        }
+
+        body:has(#blue:checked) .result {
+            background: blue;
+        }
+
+        #pink:checked ~ label[for="pink"] {
+            color: black;
+            font-weight: bold;
+        }
+
+        body:has(#pink:checked) .result {
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div class="columns">
+        <div class="control-panel">
+            <p>Tùy chỉnh hồ sơ</p>
+            <p>1.Màu nền hồ sơ </p>
+            <input type="radio" id="light" name="background-color">
+            <label for="light">Light</label>
+            <input type="radio" id="gray" name="background-color">
+            <label for="gray">Gray</label>
+            <input type="radio" id="yellow" name="background-color">
+            <label for="yellow">Yellow</label>
+            <input type="radio" id="blue" name="background-color">
+            <label for="blue">Blue</label>
+            <input type="radio" id="pink" name="background-color">
+            <label for="pink">Pink</label>
+
+            <p>2. Kích thước tên</p>
+            <input type="radio" id="name-small" name="name-size">
+            <label for="name-small">Small</label>
+
+            <input type="radio" id="name-medium" name="name-size">
+            <label for="name-medium">Medium</label>
+
+            <input type="radio" id="name-large" name="name-size">
+            <label for="name-large">Large</label>
+
+            <p>3. Kiểu chữ tên</p>
+            <input type="radio" id="normal" name="name-style">
+            <label for="normal">Normal</label>
+
+            <input type="radio" id="uppercase" name="name-style">
+            <label for="uppercase">Uppercase</label>
+
+            <p>4. Màu chữ tên</p>
+            <input type="radio" id="dark" name="name-color">
+            <label for="dark">Dark</label>
+
+            <input type="radio" id="blue-text" name="name-color">
+            <label for="blue-text">Blue</label>
+
+            <input type="radio" id="green" name="name-color">
+            <label for="green">Green</label>
+
+            <input type="radio" id="red" name="name-color">
+            <label for="red">Red</label>
+
+            <p>5. Căn lề hồ sơ</p>
+            <input type="radio" id="left" name="align">
+            <label for="left">Left</label>
+
+            <input type="radio" id="center" name="align">
+            <label for="center">Center</label>
+
+            <input type="radio" id="right" name="align">
+            <label for="right">Right</label>
+
+            <p>6. Kích thước nghề nghiệp</p>
+            <input type="radio" id="job-small" name="job-size">
+            <label for="job-small">Small</label>
+
+            <input type="radio" id="job-medium" name="job-size">
+            <label for="job-medium">Medium</label>
+
+            <input type="radio" id="job-large" name="job-size">
+            <label for="job-large">Large</label>
+
+            <p>7. Khoảng cách chữ nghề nghiệp</p>
+            <input type="radio" id="tight" name="job-spacing">
+            <label for="tight">Tight</label>
+
+            <input type="radio" id="normal-spacing" name="job-spacing">
+            <label for="normal-spacing">Normal</label>
+
+            <input type="radio" id="wide" name="job-spacing">
+            <label for="wide">Wide</label>
+
+            <p>8. Kích thước mô tả</p>
+            <input type="radio" id="desc-small" name="desc-size">
+            <label for="desc-small">Small</label>
+
+            <input type="radio" id="desc-medium" name="desc-size">
+            <label for="desc-medium">Medium</label>
+
+            <input type="radio" id="desc-large" name="desc-size">
+            <label for="desc-large">Large</label>
+
+            <p>9. Giãn dòng mô tả</p>
+            <input type="radio" id="line-tight" name="desc-line">
+            <label for="line-tight">Tight</label>
+
+            <input type="radio" id="line-normal" name="desc-line">
+            <label for="line-normal">Normal</label>
+
+            <input type="radio" id="line-loose" name="desc-line">
+            <label for="line-loose">Loose</label>
+
+            <p>10. Màu nút liên hệ</p>
+            <input type="radio" id="btn-dark" name="btn-color">
+            <label for="btn-dark">Dark</label>
+
+            <input type="radio" id="btn-blue" name="btn-color">
+            <label for="btn-blue">Blue</label>
+
+            <input type="radio" id="btn-light" name="btn-color">
+            <label for="btn-light">Light</label>
+
+
+        </div>
+        <div class="preview-area"><p>Preview hồ sơ cá nhân </p>
+            <div class="result">
+                <h1>Nguyễn Minh Khoa</h1>
+                <h3>Frontend Developer - Hồ Chí Minh </h3>
+                <p>Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại,
+                    tập trung vào hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo
+                    thành sản phẩm thực tế.</p>
+                <h4>Kỹ năng</h4>
+                <div>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Git</span>
+                </div>
+                <h4>Sở thích</h4>
+                <p>Nhiếp ảnh · Đọc sách · Du lịch · Cà phê</p>
+                <button class="contact-btn">Liên hệ với tôi</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
