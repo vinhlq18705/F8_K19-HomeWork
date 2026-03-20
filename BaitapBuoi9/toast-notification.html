@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toast-notification</title>
+    <style>
+        /*giúp mất đi dấu tích vuông */
+        input {
+            display: none;
+        }
+
+        /*tạo khối cho nút hiện tb và chỉnh để khi ấn vào hiện bàn tay*/
+        .open-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            margin: 40px;
+            cursor: pointer;
+        }
+
+        /*Khối này hiện tb khi ấn nút sẽ hiện ra để mặc định là none để khi vào nó vẫn chưa hiện */
+        div {
+            display: none;
+            padding: 10px 20px;
+            background: green;
+            color: #fff;
+            margin: 40px;
+        }
+
+        /*giúp cho dấu x đứng cạnh dòng tb */
+        p {
+            display: inline;
+        }
+
+        /*tạo khối vuông cho nút tb giao diện dễ nhìn  */
+        .close-btn {
+            padding: 2px 6px;
+            background: #918282;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*Khi ấn vào thì sẽ chuyển thẻ div sang inline-block để có thể hiện tb lên*/
+        #toast-toggle:checked ~ div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<input type="checkbox" name="checkbox" id="toast-toggle">
+<label for="toast-toggle" class="open-btn"> Hiện thông báo </label>
+<div>
+    <p>🎉Lưu thành công </p>
+    <label for="toast-toggle" class="close-btn">x</label>
+</div>
+
+
+</body>
+</html>
