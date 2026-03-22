@@ -2,183 +2,261 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Các hình tạo bằng Border - F8</title>
     <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            width: 100%;
+        }
+
+        /* Khung bao ngoài mỗi hình để căn giữa và hiển thị tên */
+        .item {
+            display: inline-block;
+            vertical-align: top;
+            width: 150px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .item p {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* 1. Hình vuông */
         .square {
-            width: 100px;
-            height: 100px;
-            border: 4px solid red;
-            margin: 20px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #e25a40;
         }
 
+        /* 2. Hình chữ nhật */
         .rectangle {
-            width: 100px;
-            height: 150px;
-            border: 4px solid blue;
-            margin: 20px;
+            display: inline-block;
+            width: 120px;
+            height: 70px;
+            border: 2px solid #5a96d5;
+            margin-top: 10px;
         }
 
+        /* 3. Tam giác lên */
         .upward-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-left: 50px;
-            border-right: 50px;
-            border-bottom: 90px;
-            border-style: solid;
-            border-color: transparent transparent #8bcf74 transparent;
-            margin: 20px;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 70px solid #8cc584;
         }
 
+        /* 4. Tam giác xuống */
         .downward-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-left: 50px;
-            border-right: 50px;
-            border-top: 90px;
-            border-style: solid;
-            border-color: orange transparent transparent transparent;
-            margin: 20px;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 70px solid #e3a23a;
         }
 
+        /* 5. Tam giác trái */
         .left-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-top: 50px;
-            border-bottom: 50px;
-            border-right: 90px;
-            border-style: solid;
-            border-color: transparent blueviolet transparent transparent;
-            margin: 20px;
+            border-top: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-right: 70px solid #8e65b6;
         }
 
+        /* 6. Tam giác phải */
         .right-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-top: 50px;
-            border-bottom: 50px;
-            border-left: 90px;
-            border-style: solid;
-            border-color: transparent transparent transparent #d5730e;
-            margin: 20px;
+            border-top: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 70px solid #d5730e;
         }
 
+        /* 7. Hình thang */
         .trapezium {
-            width: 75px;
-            border: 55px solid;
-            border-color: transparent transparent green transparent;
-            margin: 20px;
+            display: inline-block;
+            width: 80px;
+            height: 0;
+            border-bottom: 70px solid #67bc9d;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
         }
 
+        /* 8. Tam giác rộng */
         .wide-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-left: 70px;
-            border-right: 70px;
-            border-bottom: 55px;
-            border-style: solid;
-            border-color: transparent transparent #373333 transparent;
-            margin: 20px;
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 50px solid #3e4d5d;
         }
 
+        /* 9. Tam giác nhọn */
         .acute-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-left: 20px;
-            border-right: 20px;
-            border-bottom: 90px;
-            border-style: solid;
-            border-color: transparent transparent #a52323 transparent;
-            margin: 20px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 100px solid #a5432d;
         }
 
+        /* 10. Tam giác cân */
         .isosceles-triangle {
+            display: inline-block;
             width: 0;
             height: 0;
-            border: 55px solid;
-            border-color: transparent transparent blue transparent;
-            margin: 20px;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 60px solid #c15b1c;
         }
 
+        /* 11. Mũi tên phải */
         .right-arrow {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-top: 20px;
-            border-bottom: 20px;
-            border-left: 50px;
-            border-style: solid;
-            border-color: transparent transparent transparent #4f7343;
-            margin: 20px;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 50px solid #63a48e;
+            margin-top: 10px;
         }
 
+        /* 12. Mũi tên trái */
         .left-arrow {
+            display: inline-block;
             width: 0;
             height: 0;
-            border-top: 20px;
-            border-bottom: 20px;
-            border-right: 50px;
-            border-style: solid;
-            border-color: transparent blueviolet transparent transparent;
-            margin: 20px;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-right: 50px solid #8450ad;
+            margin-top: 10px;
         }
 
+        /* 13. Ribbon/Lá cờ */
         .flag {
-            width: 60px;
-            border: 30px solid;
-            border-color: red transparent red red;
-            margin: 20px;
+            display: inline-block;
+            width: 80px;
+            height: 60px;
+            background: #d55541;
+            border-right: 30px solid #f4f4f4; /* Tạo khía bằng border màu nền */
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            box-sizing: border-box;
         }
-        .F8-1{
+
+        .F8-1 {
             display: inline-block;
             height: 101px;
             border-left: 11px solid red;
             margin: 20px;
         }
-        .F8-2{
+
+        .F8-2 {
+
             display: inline-block;
             height: 30px;
             width: 50px;
             border-top: 11px solid red;
             border-bottom: 10px solid red;
             margin: 0 20px 71px -26px;
+
         }
-        .F8-3{
+
+        .F8-3 {
+
             display: inline-block;
             height: 35px;
             width: 50px;
-            border: 10px solid red;
-            margin: 0 0 66px 0;
+            border: 11px solid red;
+            margin: 0 0 65px 0;
+
         }
-        .F8-4{
+
+        .F8-4 {
+
             display: inline-block;
             height: 35px;
             width: 50px;
-            border: 10px solid red;
-            margin: 0 0 20px -73px;
+            border: 11px solid red;
+            margin: 0 0 20px -75px;
+
         }
+
 
     </style>
 </head>
 <body>
-<div class="square"></div>
-<div class="rectangle"></div>
-<div class="upward-triangle"></div>
-<div class="downward-triangle"></div>
-<div class="left-triangle"></div>
-<div class="right-triangle"></div>
-<div class="trapezium"></div>
-<div class="wide-triangle"></div>
-<div class="acute-triangle"></div>
-<div class="isosceles-triangle"></div>
-<div class="right-arrow"></div>
-<div class="left-arrow"></div>
-<div class="flag"></div>
-<div class="F8-1"></div>
-<div class="F8-2"></div>
-<div class="F8-3"></div>
-<div class="F8-4"></div>
+
+<h2>Các hình có thể tạo được với Border</h2>
+
+<div class="item">
+    <div class="square"></div>
+    <p>1. Hình vuông</p></div>
+<div class="item">
+    <div class="rectangle"></div>
+    <p>2. Hình chữ nhật</p></div>
+<div class="item">
+    <div class="upward-triangle"></div>
+    <p>3. Tam giác lên</p></div>
+<div class="item">
+    <div class="downward-triangle"></div>
+    <p>4. Tam giác xuống</p></div>
+<div class="item">
+    <div class="left-triangle"></div>
+    <p>5. Tam giác trái</p></div>
+<div class="item">
+    <div class="right-triangle"></div>
+    <p>6. Tam giác phải</p></div>
+<div class="item">
+    <div class="trapezium"></div>
+    <p>7. Hình thang</p></div>
+
+<br>
+
+<div class="item">
+    <div class="wide-triangle"></div>
+    <p>8. Tam giác rộng</p></div>
+<div class="item">
+    <div class="acute-triangle"></div>
+    <p>9. Tam giác nhọn</p></div>
+<div class="item">
+    <div class="isosceles-triangle"></div>
+    <p>10. Tam giác cân</p></div>
+<div class="item">
+    <div class="right-arrow"></div>
+    <p>11. Mũi tên phải</p></div>
+<div class="item">
+    <div class="left-arrow"></div>
+    <p>12. Mũi tên trái</p></div>
+<div class="item">
+    <div class="flag"></div>
+    <p>13. Ribbon/Lá cờ</p></div>
+
+<br>
+
+<div class="f8-container">
+    <div class="F8-1"></div>
+    <div class="F8-2"></div>
+    <div class="F8-3"></div>
+    <div class="F8-4"></div>
+    <p style="font-weight: bold; margin-top: 20px;">14. F8</p>
+</div>
 
 </body>
 </html>
