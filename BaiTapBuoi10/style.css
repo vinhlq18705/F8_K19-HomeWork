@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd;
+    width: 100%;
+    padding: 0.5rem 0;
+
+}
+
+.container {
+    display: inline-block;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.5625rem;
+}
+
+.logo img {
+    height: 2.375rem;
+    display: block;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+/*loại bỏ gạch chân*/
+a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+}
+
+/*loại bỏ dấu*/
+.menu-level-1, .submenu-level-2,
+.submenu-level-3 {
+    list-style: none;
+}
+
+/*tạo mỏ leo cho thẻ con level-2 và dàn hàng ngang */
+.menu-level-1 > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.5625rem;
+}
+
+/*tạo mỏ leo cho submenu-level-3*/
+.submenu-level-2 li {
+    position: relative;
+}
+
+/* Menu cấp 1 Link */
+.menu-item {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 0.375rem 0;
+    border-bottom: 0.125rem solid transparent;
+}
+/* Trạng thái Hover cấp 1 (Giữ màu khi hover vào con) */
+.menu-level-1 > li:hover > .menu-item {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828;
+}
+
+/* Icons */
+.icon-down {
+    color: #555555;
+    font-size: 0.625rem;
+    margin-left: 0.3125rem;
+}
+
+.icon-right {
+    float: right;
+    color: #777777;
+    font-size: 0.625rem;
+    line-height: 1.5;
+}
+
+.submenu-level-2 a,
+.submenu-level-3 a {
+    padding: 0.375rem 0.625rem;
+}
+
+/* Dropdown chung (Cấp 2 & 3) */
+.submenu-level-2,
+.submenu-level-3 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+}
+
+/* Vị trí Dropdown cấp 1 */
+.submenu-level-2 {
+    top: 100%;
+    left: 0;
+}
+
+/* Vị trí Dropdown cấp 2 */
+.submenu-level-3 {
+    top: -0.0625rem;
+    left: 100%;
+}
+
+/* Hover trên Dropdown Items */
+.submenu-level-2 li:hover > a,
+.submenu-level-3 li:hover > a {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
+
+/* Hiển thị Submenu khi Hover */
+
+
+.has-submenu:hover > .submenu-level-2 {
+    display: block;
+}
+
+.has-submenu-2:hover > .submenu-level-3 {
+    display: block;
+}
+
