@@ -20,6 +20,7 @@ body {
 #modal-toggle {
     display: none;
 }
+
 /*Giúp nút bấm nằm ở giữa */
 .main-screen {
     position: fixed;
@@ -28,6 +29,7 @@ body {
     right: 0;
     bottom: 0;
 }
+
 /*nội dung bên trong nằm ở giữa */
 .open-btn {
     position: absolute;
@@ -80,11 +82,13 @@ body {
     height: fit-content;
     display: none;
 }
+
 /*nhấn nút thì hiện form */
 #modal-toggle:checked ~ .overlay,
 #modal-toggle:checked ~ .modal-content {
     display: block;
 }
+
 /*nút đoóng*/
 .close-btn {
     position: absolute;
@@ -125,6 +129,7 @@ body {
 .required {
     color: #ef4444;
 }
+
 /*chỉnh form cho input*/
 input[type="text"],
 input[type="tel"],
@@ -165,6 +170,7 @@ input[type="email"] {
     font-size: 0.9375rem;
     color: #334155;
 }
+
 /*đoạn chứa nô dung của tooltip*/
 .tooltip {
     position: absolute;
@@ -183,6 +189,7 @@ input[type="email"] {
     width: max-content;
     max-width: 15rem;
 }
+
 /*tạo hình mũi tên chỉ xuống của tooltip*/
 .tooltip::after {
     content: "";
