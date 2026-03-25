@@ -1,0 +1,218 @@
+
+html {
+    font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+    height: 100vh;
+    font-family: sans-serif;
+    color: #1e293b;
+}
+
+/*Giao diện chính */
+#modal-toggle {
+    display: none;
+}
+/*Giúp nút bấm nằm ở giữa */
+.main-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/*nội dung bên trong nằm ở giữa */
+.open-btn {
+    position: absolute;
+    width: 12.5rem;
+    height: 3.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #f05123;
+    color: #ffffff;
+    text-align: center;
+    line-height: 3.5rem;
+    border-radius: 6.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    outline: 0.5rem solid rgba(240, 81, 35, 0.2);
+}
+
+.open-btn:hover {
+    background-color: #d8431c;
+}
+
+/*modal&overlay*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: fixed;
+    z-index: 20;
+    width: 30rem;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    display: none;
+}
+/*nhấn nút thì hiện form */
+#modal-toggle:checked ~ .overlay,
+#modal-toggle:checked ~ .modal-content {
+    display: block;
+}
+/*nút đoóng*/
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 2rem;
+    color: #64748b;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.title {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.desc {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #334155;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.required {
+    color: #ef4444;
+}
+/*chỉnh form cho input*/
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border: 0.0625rem solid #e2e8e0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1e293b;
+    outline: none;
+}
+
+.course-group {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-group p {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.checkbox-item {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: #334155;
+}
+/*đoạn chứa nô dung của tooltip*/
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: normal;
+    z-index: 50;
+    margin-bottom: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 15rem;
+}
+/*tạo hình mũi tên chỉ xuống của tooltip*/
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0.75rem;
+    border-width: 0.3125rem;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+/* hiển thị tooltip khi hover */
+.form-group input:hover + .tooltip,
+.checkbox-item:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #a855f7;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #9333ea;
+}
