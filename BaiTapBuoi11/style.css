@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div > div {
+    width: 60px;
+    height: 60px;
+    background: #7070e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+body > div {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+    font-weight: bold;
+}
+
+/*cross căn giữa dọc- main từ trái sang*/
+.container-1 {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*cross căn giữa dọc - main từ phải sang*/
+.container-2 {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-3 {
+    align-items: center;
+    flex-direction: column;
+    /*justify-content:  center;*/
+}
+
+.container-3 > div:nth-child(2) {
+    margin: 20px 0 50px;
+}
+
+.container-4 {
+    align-items: center;
+    justify-content: center;
+}
+
+.container-4 > div:nth-child(2) {
+    margin: 0 40px 0 10px;
+}
+
+.container-5 {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-6 {
+    justify-content: space-between;
+}
+
+.container-6 > div {
+    margin-top: 10px;
+}
+
+.container-7 {
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-7 > div:nth-child(2) {
+    margin: 60px 0 20px;
+}
+
+.container-8 {
+    align-items: center;
+}
+
+.container-8 > div:nth-child(2) {
+    margin: auto;
+}
+
+.container-9 {
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-9 > div:nth-child(2) {
+    margin-top: auto;
+    margin-bottom: auto;
+    /*margin-right: 20px;*/
+    /*margin-left: 20px;*/
+}
+
+.container-9 > div:first-child {
+    margin: 30px 20px -30px -140px;
+    /*margin-top:30px;*/
+    /*margin-bottom: -30px;*/
+    /*margin-left: -140px;*/
+    /*margin-right: 20px;*/
+}
+
+.container-9 > div:last-child {
+    margin: -30px -140px 30px 20px
+    /*margin-top:-30px;*/
+    /*margin-bottom: 30px;*/
+    /*margin-right: -140px;*/
+}
+
+.container-10 > div:nth-child(2) {
+    margin: auto;
+}
+
+.container-10 > div:first-child {
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.container-10 > div:last-child {
+    margin-top: auto;
+    margin-left: auto;
+
+}
+
