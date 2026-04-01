@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ebf5fe;
+    color: #666666;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin: 20px 100px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/*phân cột */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid #e0e0e0;
+    flex: calc((100% - 40px) / 3);
+    /*chia thành 3 cột mỗi hàng */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #ebf5fe;
+}
+/*màu cho các icon*/
+.color-red-orange{
+    background: #ff6b6b;
+}
+.color-teal {
+    background: #4ecdc4;
+}
+.color-yellow-orange {
+    background: #f9a825;
+}
+.color-blue{
+    background: #5e9cff;
+}
+.color-purple{
+    background: #9b59b6;
+}
+.color-green{
+    background: #7cb342;
+}
+
+
+span {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 20px 0 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+p {
+    font-size: 15px;
+    color: #666666;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2196f3;
+}
+/*hiệu ứng hover*/
+a:hover {
+    text-decoration: underline;
+}
+.unique-ui-ux-design:hover {
+    border:3px solid #ff6b6b;
+}
+.theme-development:hover {
+    border:3px solid #4ecdc4;
+}
+.digital-marketing:hover {
+    border:3px solid #f9a825;
+}
+.website-design:hover {
+    border:3px solid #5e9cff;
+}
+.responsive-design:hover {
+    border:3px solid #9b59b6;
+}
+.quick-support:hover {
+    border:3px solid #7cb342;
+}

@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #f8f9fa;
+}
+/*tiêu để*/
+.header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 15px;
+    color: #7f8c8d;
+}
+/*phân khối */
+.grid {
+    display: flex;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: calc(350px * 3 + 25px * 2);
+    /*cố định mỗi cột rộng 350px*/
+}
+
+.card {
+    width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/*điều chỉnh các icon trên card-img*/
+.badge {
+    position: absolute;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sale {
+    top: 10px;
+    left: 10px;
+    background: #e74c3c;
+}
+
+.rent {
+    top: 10px;
+    left: 10px;
+    background: #e67e22;
+}
+
+.type {
+    top: 10px;
+    right: 10px;
+    background: #34495e;
+}
+
+.price {
+    bottom: 10px;
+    left: 10px;
+    background: #16a085;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 20px;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
+.flash {
+    position: absolute;
+    top: 10px;
+    left: 110px;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    background: #2c3e50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.actions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.btn.share:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn.heart:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+ /*xử lý  icon tim đầy */
+.heart .full {
+    display: none;
+}
+
+.heart:hover .full {
+    display: block;
+}
+
+.heart:hover .mdi-heart-outline {
+    display: none;
+}
+
+/*card-body*/
+.card-body {
+    padding: 18px;
+}
+
+.location {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.location i {
+    color: #95a5a6;
+}
+
+.card-body h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+/*dàn hàng meta*/
+.meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    background: #bdc3c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+/*thông tin*/
+.info {
+    border-top: 1px solid #ecf0f1;
+    margin-top: 12px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.info i {
+    color: #95a5a6;
+}
